@@ -1,0 +1,33 @@
+@charset 'utf-8';
+
+html,head,body,div,span,header,section,footer,nav,article,aside,address,ul,ol,li,a,img,video,audio,picture,form,label,input,select,textarea,button,h1,h2,h3,h4,h5,h6,p,iframe,strong,table,tr,td,th,figure,figcaption,hr,br{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+ul,ol,li{
+    list-style:none;
+}
+img{
+    width:100%;
+    vertical-align:bottom;
+}
+a{
+    color:inherit;
+    text-decoration:none;    
+}
+address{
+    font-style:normal;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight:inherit;
+    font-size:inherit;
+}
+strong{
+    font-weight:inherit;
+}
+.clearfix::after{
+    content:'';
+    display:block;
+    clear:both;
+}
