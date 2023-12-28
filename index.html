@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(주)스타리무진</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+    <style>
+        @media (max-width:767px) {
+
+            img{
+                width: 450px;
+                
+            }
+            #header .logo-img,#header .top-nav,#header .origin{
+                display: none;
+            }
+
+            .mo-img{
+                display: block;
+                position: absolute;
+                right: 10px;
+                top: -20px;
+            }
+
+            #sec01{
+                width: 450px;
+                margin-bottom: 4px;
+            }
+
+            #sec01 h2{
+                top: 130px;
+                left: 20px;
+                font-size: 30px;
+            }
+
+            #sec01-1{
+                display: flex;
+                margin-bottom: 4px;
+            }
+
+            #sec02{
+                display: none;
+            }
+
+            .left-ban img{
+                width: 450px;
+            }
+
+            .right-ban .ga{
+                width: 450px;
+                height: 254px;
+            }
+
+            #sec03{
+                display: none;
+            }
+
+            .d2{
+                display: none;
+            }
+
+            #sec03-1{
+                display: flex;
+            }
+
+            .you{
+                width: 450px;
+            }
+            .side{
+                display: none;
+            }
+
+            #sec04{
+                display: block;
+            }
+
+            #footer{
+                width: 450px;
+            }
+
+            #footer address{
+                font-size: 12px;
+            }
+
+            .so{
+                display: flex;
+                justify-content: space-around;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>(주)스타리무진</h1>
+        <header id="header">
+            <div class="mo-img">
+                <img src="./img/nav2.png" id="btn" alt="" style="width: 30px;" onclick="subNav();">
+            </div>
+
+            <div class="mo-x" id="mob">
+                <img src="./img/nav2.png" id="close" alt="" style="width: 30px;" onclick="closeNav();">
+            </div>
+        <div id="sub" class="sub-nav">
+        <ul class="sub">
+            <li><a href="#">홈</a></li>
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">모델</a></li>
+            <li><a href="#">커스텀</a></li>
+            <li><a href="#">가상견적</a></li>
+            <li><a href="#">유튜브</a></li>
+            <li><a href="#">갤러리</a></li>
+            <li><a href="#">고객지원</a></li>
+        </ul>
+    </div>
+
+                <div class="logo-img">
+                  <img src="./img/logo_gold.png" alt="로고">
+                </div>
+                <div class="top-nav">
+                <nav>
+                    <ul>
+                            <li><a href="./index.html">홈</a></li>
+                            <li><a href="./ab.html">회사소개</a></li>
+                            <li>모델</li>
+                            <li style="display: none;">패키지</li>
+                            <li>커스텀</li>
+                            <a href="./prestige.html"><li style="margin-right: 30px;">가상견적</li></a>
+                            <li><a href="https://www.youtube.com/@Starlm/videos">유튜브</a></li>
+                            <li style="display: none;">갤러리</li>
+                            <li>고객지원</li>
+                            <li>
+                                <form id="searchForm" action="/search" method="GET">
+                                    <button type="submit">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </button>
+                                    <input onkeyup="enterkey()" type="search" name="searchValue">
+                                </form>
+                            </li>
+                        </ul>
+                        <h3>The One And Only Carnival Hi Limousine</h3>
+                </nav>
+            </div>
+                <div class="origin">
+                    <img src="./img/logo_origin.png" alt="오리진로고" style="width: 250px; margin-left: 20px; margin-top: 0px;">
+                </div>
+        </header>
+        <section id="sec01">
+            <div class="container">
+                    <div class="slide">
+                        <img class="img" src="./img/header_img.jpg" />
+                        <img class="img" src="./img/sec01_01.png" />
+                        <img class="img" src="./img/sec01_02.png" />
+                        <img class="img" src="./img/sec01_03.png" />
+                        <img class="img" src="./img/sec01_04.png" />
+                        <img class="img" src="./img/sec01_05.png" />
+                    </div>
+                <h2>All New The Origin is Coming</h2>
+            </div>
+        </section>
+
+        <section id="sec01-1">
+            <div class="gasang">
+                <img src="./img/sec02_02_01.png" alt="" style="width: 225px;">
+            </div>
+            <div class="model">
+                <img src="./img/sec02_02_02.png" alt="" style="width: 225px;" id="mob-x">
+            </div>
+        </section>
+
+        <section id="sec02">
+        <div class="left-ban">
+            <!-- 패키지 -->
+            <a href="#"><img src="./img/sec02_01.png"></a>
+        </div>
+
+        <div class="right-ban">
+            <!-- 가상견적 -->
+            <a href="./prestige.html"><img src="./img/sec02_02_01.png" class="ga"></a>
+            <!-- 모델 -->
+            <a href="#"><img src="./img/sec02_02_02.png"></a>
+        </div>
+        </section>
+        <section id="sec03">
+            <!-- 브랜드 -->
+            <div class="sec03-box">
+                <a href="#"><img src="./img/sec03_709px.png"></a>
+            </div>
+            <!-- 유튜브 -->
+            <iframe class="you" width="560" height="315" src="https://www.youtube.com/embed/oAHt1vzbV60?si=FRvracWICj_Yitgh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </section>
+
+        <div id="sec03-1">
+            <div class="brand" style="margin-bottom: 4px;">
+                <a href="#"><img src="./img/sec03_709px.png" style="width: 225px; height: 200px;"></a>
+            </div>
+            <div class="about" style="margin-bottom: 4px;">
+                <a href="./about.html"><img src="./img/2.jpg"  style="width: 225px; height: 200px;"/></a>
+            </div>
+            </div>
+
+            <div class="sec03-2">
+                <div class="youtube">
+                    <iframe width="450" height="255" src="https://www.youtube.com/embed/oAHt1vzbV60?si=FRvracWICj_Yitgh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+
+        <section id="sec04">
+            <!-- 갤러리 -->
+            <div class="1">
+                <a href="#"><img src="./img/1.jpg" /></a>
+            </div>
+            <!-- 회사소개 -->
+            <div class="d2">
+                <a href="./about.html"><img src="./img/2.jpg" /></a>
+            </div>
+            <!-- 고객지원 -->
+            <div class="3">
+                <a href="tel:010-3443-5643"><img src="./img/3.jpg" onclick="document.location.href='tel:010-3443-5643'"/></a>
+            </div>
+        </section>
+
+
+        <footer id="footer">
+            <address>
+                <a href="#">이용약관</a>&nbsp;&nbsp;&nbsp;&nbsp; 
+                <a href="#">개인정보처리방침</a> <br><br><br>
+                회사명 : (주)스타리무진 &nbsp; |&nbsp;  대표자 : 김민수 <br><br>
+                주소 : 인천 서구 백범로 830 3층&nbsp; |&nbsp; 
+                이메일 : niziume@naver.com <br><br>
+                전화 : 1588-8216 &nbsp; |&nbsp; 
+                팩스 : 032-573-9773 <br><br>
+                사업자등록번호 : 614-81-06215
+                <br><br><br><br>
+                <div class="so">
+                    <div class="u">
+                        <a href="https://www.youtube.com/@Starlm/videos"><img src="./img/youtube-icon-style.png" alt="" style="width: 30px;"></a>
+                    </div>
+                    <div class="naver">
+                        <a href="https://www.naver.com/"><img src="./img/navertalk.png" alt="" style="width: 30px;"></a>
+                    </div>
+                    <div class="kak">
+                        <a href="#"><img src="./img/kkatalk.jpg" alt="" style="width: 30px;"></a>
+                    </div>
+                </div>
+                <br><br><br>
+                © STAR LIMOUSINE 2022
+            </address>
+        </footer>
+        
+        <div class="side">
+            <ul>
+                <li>
+                    <img src="./img/kt.png" alt="">
+                </li>
+                <li>
+                    <img src="./img/cr.png" alt="">
+                </li>
+                <li>
+                    <img src="./img/yout.png" alt="">
+                </li>
+                <li>
+                    <img src="./img/naver.png" alt="">
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <script src="./js/main.js"></script>
+    <script>
+
+        function subNav(){
+            document.getElementById('sub').style.display = 'block';
+            document.getElementById('mob').style.display = 'block';
+        }
+
+        function closeNav(){
+            document.getElementById('sub').style.display = 'none';
+            document.getElementById('mob').style.display = 'none';
+        }
+
+    </script>
+
+</body>
+</html>

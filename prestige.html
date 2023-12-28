@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+<head>
+    <meta charset="euc-kr">
+    <meta name="viewport" content="target-densitydpi=medium-dpi, width=360">
+    <meta name="description" content="카니발,카니발하이리무진,카니발커스텀,카니발패키지,카니발리무진,,리무진커스텀"/>
+    <meta name="keywords" content="카니발,카니발하이리무진,카니발커스텀,카니발패키지,카니발리무진,리무진커스텀"/>
+    <meta name="author" content="스타리무진,특장,starlimousine">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="images/k_logo.png">
+    <meta property="og:title" content="(주)스타리무진">
+    <meta property="og:description" content="대한민국 최고의 카니발 특장업체">
+    <meta property="og:image" content="">
+    <meta property="og:title" content="starlimousine">
+    <meta property="og:description" content="카니발,카니발하이리무진,카니발커스텀,카니발패키지,카니발리무진,리무진커스텀"><!--소셜 공유 정보-->
+    <title>(주)스타리무진</title>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+
+    <script>
+        $("#price").on("click", "input:checkbox", function () {
+    var $items = $("#price").find("input:checkbox:checked");
+    var $total = $(".total");
+    var cur_total = 0;
+    
+    $items.each(function () {
+        var $this = $(this);
+        var $target = $("label[for='" + $this.attr("id") + "']");
+        var item_value = +($target.html().replace("$", "") || 0);
+        
+        cur_total += item_value;
+    });
+    
+    $total.html("$" + cur_total);
+});
+    </script>
+    <style> 
+        /* CSS 스타일을 적용하기 위한 스타일 시트 */
+    
+       /* 기본 스타일 (모바일 및 데스크톱에 공통) */
+       .container {
+          background-color: #000;
+          display: flex;
+          flex-wrap: wrap; /* 화면 크기가 작을 때 아이템들을 줄바꿈합니다. */
+          margin: 30px auto; /* 전체적인 간격을 조절합니다. */
+        }
+    
+    
+        .item {
+          flex: 1;
+          text-align: center;
+          /* border: 1px solid black; */
+          /* background-color: ; */
+          padding:10px 0;
+          margin: 0 auto;
+          margin-right: 10px;
+          padding: 20px;
+        }
+    
+    
+        .item a {
+          text-decoration: none;
+          color: #fff;
+          font-weight: 700;
+        }
+
+        .mo-img img,.mo-x img{
+            display: none;
+        }
+    
+    
+        /* 미디어 쿼리를 사용하여 화면 크기에 따라 스타일을 조절합니다. */
+        @media screen and (min-width: 360px) {
+          /* 360px 이상일 때 적용되는 스타일 */
+          .item {
+            flex: 0 0 calc(15% - 10px); /* 4개의 아이템을 한 줄에 나타내기 위해 너비를 조절합니다. */
+            margin: 0 auto;
+          }
+
+          .mo-img img,.mo-x img{
+            display: block;
+          }
+        }
+      </style>
+</head>
+<body>
+        <header id="header" style="height: 80px;">
+
+                <div class="mo-img">
+                    <img src="./img/nav2.png" id="btn" alt="" style="width: 30px;" onclick="subNav();">
+                </div>
+
+                <div class="mo-x" id="mob">
+                    <img src="./img/nav2.png" id="close" alt="" style="width: 30px;" onclick="closeNav();">
+                </div>
+
+
+            <div id="sub" class="sub-nav" style="display: none;">
+            <ul class="sub">
+                <li><a href="#">홈</a></li>
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">모델</a></li>
+                <li><a href="#">커스텀</a></li>
+                <li><a href="#">가상견적</a></li>
+                <li><a href="#">유튜브</a></li>
+                <li><a href="#">갤러리</a></li>
+                <li><a href="#">고객지원</a></li>
+            </ul>
+        </div>
+
+            <div class="logo-img">
+              <a href="./index.html"><img src="./img/logo_gold.png" alt="로고"></a>
+            </div>
+            <nav style="margin-top: 60px; margin-left: 50px;">
+                <ul>
+                    <li><a href="./index.html">홈</a></li>
+                        <li><a href="./ab.html">회사소개</a></li>
+                        <li>모델</li>
+                        <li style="display: none;">패키지</li>
+                        <li>커스텀</li>
+                        <a href="./prestige.html"><li style="margin-right: 30px;">가상견적</li></a>
+                        <li><a href="https://www.youtube.com/@Starlm/videos">유튜브</a></li>
+                        <li style="display: none;">갤러리</li>
+                        <li>고객지원</li>
+                        <li>
+                        <form id="searchForm" action="/search" method="GET">
+                            <button type="submit">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                            <input onkeyup="enterkey()" type="search" name="searchValue">
+                        </form>
+                    </li>
+                </ul>
+                    <h3>The One And Only Carnival Hi Limousine</h3>
+            </nav>
+        </div>
+            <div class="origin" style="margin-top: 20px;">
+                <a href="./index.html"><img src="./img/logo_origin.png" alt="오리진로고" style="width: 250px; margin-left: 20px; margin-top: 0px;"></a>
+            </div>
+
+    </header>
+
+    <div class="blank"></div><br>
+    
+    <section id="price" style="width: 90%;">
+        <form method="POST" name="myform" class="wrap">
+            <article class="cont1">
+  <div class="container" style="margin-bottom: 150px;">
+    <div class="item"><a href="./Prestige.html">프레스티지</a></div>
+    <div class="item"><a href="./nobless.html">노블레스</a></div>
+    <div class="item"><a href="./sig.html">시그니처</a></div>
+    <div class="item" style="margin-right: 0;"><a href="./ex.html">그래비티</a></div>
+  </div>
+
+
+
+                <h2></h2>
+                <h2 style="text-align: center;">프레스티지</h2><br><br>
+<p style="text-align: center; "><b style="font-size: 9pt;"><span style="font-size: 16pt;"><span style="font-size: 12pt;"><span style="font-size: 16pt;"><span style="font-family: 돋움, dotum;"><span style="font-family: Arial;"><a href="./Prestige.html" ><span comic="" sans="" ms;><span  style="color: rgb(0, 0, 255);" ms="">9인승</span></span></a><span  comic="" sans=""><span> <a href="" > </a></span></span></span></span></span></span></span></b><b style="font-size: 9pt;"><span style="font-size: 16pt;"><span style="font-size: 12pt;"><span style="font-size: 16pt;"><span style="font-family: 돋움, dotum;"><span style="font-family: Arial;"><span comic="" sans="" ms><span  style="color: rgb(0, 0, 255);" ms="" pmincho><a href="./prestigeseven.html" ><span style="color: rgb(0, 0, 0);"></span></a></span></span></span></span></span></span></span></b></p>
+
+                <ul>
+                    <li class="gravity">
+                        <img src="./img/sub-main.jpg" alt="">
+                        <p>
+                            <input type="checkbox" value=34700000 id="cb" class="cb" onclick="CheckChoice(this);"> 
+                            카니발 하이리무진 9인승<b>+ ￦ 34,700,000</b>
+                        </p>
+                    </li>
+
+                </ul>
+            </article>
+                
+            <article class="cont2">
+                <h2>엔진</h2>
+                <ul>
+                    <li>
+                        <img src="./img/prd1_2_1.png" alt="">
+                        <p>
+                            <input type="checkbox" value=0 id="cb" onclick="CheckChoice(this);"> 
+                            3.5 가솔린<b>+ ￦ 0</b>
+                        </p>
+                    </li>
+                    <li>
+
+
+
+
+                        <img src="./img/prd1_2_2.png" alt="">
+                        <p>
+                            <input type="checkbox" value=1950000 id="cb" class="cb" onclick="CheckChoice(this);"> 
+                            2.2 디젤<b>+ ￦ 1,950,000</b>
+                        </p>
+
+
+
+
+                    </li>
+                     <li>
+
+
+
+ 
+                        <img src="./img/prd1_35_11.jpg" alt="">
+                        <p>
+                            <input type="checkbox" value=4550000 id="cb" class="cb" onclick="CheckChoice(this);">
+                            1.6 하이브리드<b>+ ￦ 4,550,000</b>
+                        </p>
+
+
+
+
+                    </li>
+                </ul>
+            </article>
+
+            <article class="cont4">
+                <h2>차량색상</h2>
+                <h4 style="text-align: center;"></h4>
+                <h4 style="text-align: center;"></h4>
+                <ul>
+                    <li class="dn_style"> 
+                        <img src="./img/prd1_4_1.png" alt="">
+                        <p>
+                            <input type="checkbox" value=80000 id="cb" class="cb"  onclick="CheckChoice(this);">
+                            스노우 화이트 펄<b>+ ￦ 80,000</b>
+                        </p>
+                    </li>
+                    <li class="dn_style">
+                        <img src="./img/prd1_4_677.png" alt="">
+                        <p>
+                            <input type="checkbox" value=0 id="cb" class="cb"  onclick="CheckChoice(this);"> 
+                            아이보리 실버<b>+ ￦ 0</b>
+                        </p>
+                    </li>
+                    <li class="dn_style"> 
+                        <img src="./img/prd1_4_4.png" alt="">
+                        <p>
+                            <input type="checkbox" value=0 id="cb" class="cb"  onclick="CheckChoice(this);">
+                            아스트라 블루<b>+ ￦ 0</b>
+                        </p>
+                    </li>
+                    <li class="dn_style"> 
+                        <img src="./img/prd1_4_2.png" alt="">
+                        <p>
+                            <input type="checkbox" value=0 id="cb" class="cb"  onclick="CheckChoice(this);">
+                            오로라 블랙 펄<b>+ ￦ 0</b>
+                        </p>
+                    </li>
+                    <li class="dn_style">
+                        <img src="./img/prd1_4_3.png" alt="">
+                        <p>
+                            <input type="checkbox" value=0 id="cb" class="cb"  onclick="CheckChoice(this);">
+                            판테라 메탈<b>+ ￦ 0</b>
+                        </p>
+                    </li>
+                </ul>
+            </article>
+
+            <article class="cont5">
+                <h2>실내색상</h2>
+                <!-- <h4 style="text-align: center;"><p style="text-align: center; "><span style="color: rgb(255, 0, 0);"><span style="color: rgb(255, 0, 0);">네이비그레이는 하이브리드 전용입니다.</span></span></p></h4> -->
+                <h4 style="text-align: center;"> </h4>            
+                <ul>
+                    <li>
+                        <img src="./img/prd1_5_7.jpg" alt="">
+                        <p>
+                            <input type="checkbox" value=0 id="cb" class="cb"  onclick="CheckChoice(this);"> 
+                            토프<b>+ ￦ 0</b>
+                        </p>
+                    </li>
+                    <li>
+                        <img src="./img/prd1_5_9.jpg" alt="">
+                        <p>
+                            <input type="checkbox" value=0 id="cb" class="cb"  onclick="CheckChoice(this);"> 
+                            코튼베이지<b>+ ￦ 0</b>
+                        </p>
+                    </li>
+                </ul>
+            </article>
+            
+            <article class="cont6" style="display: none;">
+                <h2>루프선택</h2>
+                <h4 style="text-align: center;">  </h4>
+                <ul>
+                    <li>
+                        <input type="checkbox" value=0 id="cb" class="cb"  onclick="CheckChoice(this);"> 
+                        <img src="./img/prd1_6_2.png" alt="">
+                        <p>A Type</p>
+                    </li>
+                    <li>
+                        <input type="checkbox" value=0 id="cb" class="cb"  onclick="CheckChoice(this);"> 
+                        <img src="./img/prd1_6_1.png" alt="">
+                        <p>B Type</p>
+                    </li>
+                    <li>
+                        <input type="checkbox" value=4500000 id="cb" class="cb"  onclick="CheckChoice(this);"> 
+                        <img src="./img/prd1_6_3.png" alt="">
+                        <p>파노라마 선루프<b>+4,500,000</b></p>
+                    </li>
+                </ul>
+            </article>
+            
+            <article class="cont3">
+                <h2>차량옵션</h2>
+                <ul>
+
+                    <li> 
+                        <img src="./img/sub-main.jpg" alt="">
+                        <p>
+                            <input type="checkbox" value=1400000 name="13" class="cb"  onclick="CheckChoice(this);">
+                            컴포트(9인승, 그래비티)<b>+ ￦ 1,400,000</b>
+                        </p>
+                    </li>
+                    <li class="dn_style"> 
+                        <img src="./img/sub-main.jpg" alt="">
+                        <p>
+                            <input type="checkbox" value=750000 name="14" class="cb"  onclick="CheckChoice(this);">
+                            드라이브 와이즈(그래비티)<b>+ ￦ 750,000</b>
+                        </p>
+                    </li>
+                    <li> 
+                        <img src="./img/sub-main.jpg" alt="">
+                        <p>
+                            <input type="checkbox" value=1200000 name="15" class="cb"  onclick="CheckChoice(this);">
+                            HUD + 빌트인 캠 2<b>+ ￦ 1,200,000</b>
+                        </p>
+                    </li>
+                    <li> 
+                        <img src="./img/sub-main.jpg" alt="">
+                        <p>
+                            <input type="checkbox" value=600000 class="cb"  onclick="CheckChoice(this);">
+                            KRELL 프리미엄 사운드<b>+ ￦ 600,000</b>
+                        </p>
+                    </li>
+                    <li>
+                        <img src="./img/sub-main.jpg" alt="">
+                        <p>
+                            <input type="checkbox" value=1200000 class="cb"  onclick="CheckChoice(this);"> 
+                            모니터링 팩(그래비티)<b>+ ￦ 1,200,000</b>
+                        </p>
+                    </li>
+                    <li>
+                        <img src="./img/sub-main.jpg" alt="">
+                        <p>
+                            <input type="checkbox" value=1050000 class="cb"  onclick="CheckChoice(this);"> 
+                            스마트커넥트<b>+ ￦ 1,050,000</b>
+                        </p>
+                    </li>
+                </ul>
+            </article>
+            
+            
+            
+            
+            
+            <article class="cont9" style="display: none;">
+                <h2>커스텀 선택</h2>
+                <!-- <h4 style="text-align: center;"><p style="text-align: center; "><span style="color: rgb(255, 0, 0);"><span style="color: rgb(255, 0, 0);">고객님이 원하실 경우 실내 컨버전 패키지를 추가하시면 됩니다.</span></span></p></h4> -->
+                <ul>
+                    <li>
+                        <div> 
+                            <input type="checkbox" value=2950000 class="cb"  onclick="CheckChoice(this);"> 
+                            <img src="./img/prd1_9_1.png" alt="" data-path="/img" data-pkg="prd1_pkg1">
+                            <p>Package1<b>+ 2,950,000</b></p>
+                        </div> <!-- 추가옵션이 붙을 경우 윗부분을 div로 감싸주고 아래 ul 부분을 추가해야함 -->
+                        <h3>추가옵션 보기 +</h3>
+                        <ul> 
+                            <li><img src="/img/pa2.jpg" alt=""><input type="checkbox" value=1000000 onclick="CheckChoice(this);"> <p>도어 4ps 트리밍 <b>+1,000,000</b></p></li>
+                            <li><img src="/img/pa3.jpg" alt=""><input type="checkbox" value=1200000 onclick="CheckChoice(this);"> <p>러기지&트렁크트리밍 <b>+1,200,000</b></p></li>
+                            <li><img src="/img/pa4.jpg" alt=""><input type="checkbox" value=1700000 onclick="CheckChoice(this);"> <p>T존트리밍 <b>+1,700,000</b></p></li>
+                            <li><img src="/img/pa5.jpg" alt=""><input type="checkbox" value=900000 onclick="CheckChoice(this);"> <p>D컷핸들 <b>+900,000</b></p></li>
+                            <li><img src="/img/pa6.jpg" alt=""><input type="checkbox" value=1200000 onclick="CheckChoice(this);"> <p>CN 핸들 <b>+1,200,000</b></p></li>
+                            <li><img src="/img/pa6-2.jpg" alt=""><input type="checkbox" value=1300000 onclick="CheckChoice(this);"> <p>CN 우드핸들 <b>+1,300,000</b></p></li>
+                            <li><img src="/img/pa7.jpg" alt=""><input type="checkbox" value=800000 onclick="CheckChoice(this);"> <p>안전벨트 color change <b>+800,000</b></p></li>
+                            <li><img src="/img/pa8.jpg" alt=""><input type="checkbox" value=1400000 onclick="CheckChoice(this);"> <p>Foot-rest 2ps <b>+1,400,000</b></p></li>
+                            <li><img src="/img/pa9.jpg" alt=""><input type="checkbox" value=0 onclick="CheckChoice(this);"> <p>Special Mood lemp <b>리무진 구매시 기본옵션</b></p></li>
+                            <li><img src="/img/pa10.jpg" alt=""><input type="checkbox" value=1000000 onclick="CheckChoice(this);"> <p>Space Mood lemp <b>+1,000,000</b></p></li>
+                            <li><img src="/img/pa13.jpg" alt=""><input type="checkbox" value=1700000 onclick="CheckChoice(this);"> <p>대리석 플로어 <b>+1,700,000</b></p></li>
+                            <li><img src="/img/pa14.jpg" alt=""><input type="checkbox" value=2700000 onclick="CheckChoice(this);"> <p>우드플로어 <b>+2,700,000</b></p></li>
+                            <li><img src="/img/pa15.jpg" alt=""><input type="checkbox" value=1800000 onclick="CheckChoice(this);"> <p>파이버테리어 Star Light <b>+1,800,000</b></p></li>
+                            <li><img src="/img/pa300.jpg" alt=""><input type="checkbox" value=500000 onclick="CheckChoice(this);"> <p>슈팅 스타라이트 <b>+500,000</b></p></li>
+                            <li><img src="/img/pa17.jpg" alt=""><input type="checkbox" value=1200000 onclick="CheckChoice(this);"> <p>폴딩 백 멀티 시트 테이블 1ea <b>+1,200,000</b></p></li>
+                            <li><img src="/img/st011.jpg" alt=""><input type="checkbox" value=500000 onclick="CheckChoice(this);"> <p>고정식 사이드 스텝 <b>+500,000</b></p></li>
+                            <li><img src="/img/dheldh1.jpg" alt=""><input type="checkbox" value=980000 onclick="CheckChoice(this);"> <p>오디오 패키지Ⅰ <b>+980,000</b></p></li>
+                            <li><img src="/img/dheldh2.jpg" alt=""><input type="checkbox" value=3800000 onclick="CheckChoice(this);"> <p>오디오 패키지Ⅱ <b>+3,800,000</b></p></li>
+                            <li><img src="/img/dheldh3.jpg" alt=""><input type="checkbox" value=7900000 onclick="CheckChoice(this);"> <p>오디오 패키지Ⅲ <b>+7,900,000</b></p></li>
+                            <li><img src="/img/dheldh4.jpg" alt=""><input type="checkbox" value=11800000 onclick="CheckChoice(this);"> <p>오디오 패키지Ⅳ <b>+11,800,000</b></p></li>
+                            <li><img src="/img/pa108.jpg" alt=""><input type="checkbox" value=800000 onclick="CheckChoice(this);"> <p>한쪽 전동식 사이드 스텝<b>+800,000</b></p></li>
+                            <li><img src="/img/pa107.jpg" alt=""><input type="checkbox" value=5800000 onclick="CheckChoice(this);"> <p>네오테크 어반 서스펜션 <b>+5,800,000</b></p></li>
+                            <li><img src="/img/pa109.jpg" alt=""><input type="checkbox" value=3500000 onclick="CheckChoice(this);"> <p>HSD 프리미엄 서스펜션 <b>+3,500,000</b></p></li>
+                            <li><img src="/img/pa121.jpg" alt=""><input type="checkbox" value=2700000 onclick="CheckChoice(this);"> <p>CN 멀티 스포크 디자인 휠 20인치<b>+2,700,000</b></p></li>
+                            <li><img src="/img/pa115.jpg" alt=""><input type="checkbox" value=3700000 onclick="CheckChoice(this);"> <p>CN 멀티 스포크 디자인 휠 22인치<b>+3,700,000</b></p></li>
+                            <li><img src="/img/pa116.jpg" alt=""><input type="checkbox" value=3700000 onclick="CheckChoice(this);"> <p>핸즈 프라임 PR031 휠&타이어 <b>+3,700,000</b></p></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div>
+                            <input type="checkbox" value=4100000 onclick="CheckChoice(this);"> 
+                            <img src="./img/prd1_9_2.png" alt=""  data-path="/base/img/price" data-pkg="prd1_pkg2">
+                            <p>Package2<b>+ 4,100,000</b></p>
+                        </div>
+                        <h3>추가옵션 보기 +</h3>
+                        <ul> 
+                            <li><img src="/img/pa2.jpg" alt=""><input type="checkbox" value=1000000 onclick="CheckChoice(this);"> <p>도어 4ps 트리밍 <b>+1,000,000</b></p></li>
+                            <li><img src="/img/pa3.jpg" alt=""><input type="checkbox" value=1200000 onclick="CheckChoice(this);"> <p>러기지&트렁크트리밍 <b>+1,200,000</b></p></li>
+                            <li><img src="/img/pa4.jpg" alt=""><input type="checkbox" value=1700000 onclick="CheckChoice(this);"> <p>T존트리밍 <b>+1,700,000</b></p></li>
+                            <li><img src="/img/pa5.jpg" alt=""><input type="checkbox" value=900000 onclick="CheckChoice(this);"> <p>D컷핸들 <b>+900,000</b></p></li>
+                            <li><img src="/img/pa6.jpg" alt=""><input type="checkbox" value=1200000 onclick="CheckChoice(this);"> <p>CN 핸들 <b>+1,200,000</b></p></li>
+                            <li><img src="/img/pa6-2.jpg" alt=""><input type="checkbox" value=1300000 onclick="CheckChoice(this);"> <p>CN 우드핸들 <b>+1,300,000</b></p></li>
+                            <li><img src="/img/pa7.jpg" alt=""><input type="checkbox" value=800000 onclick="CheckChoice(this);"> <p>안전벨트 color change <b>+800,000</b></p></li>
+                            <li><img src="/img/pa8.jpg" alt=""><input type="checkbox" value=1400000 onclick="CheckChoice(this);"> <p>Foot-rest 2ps <b>+1,400,000</b></p></li>
+                            <li><img src="/img/pa9.jpg" alt=""><input type="checkbox" value=0 onclick="CheckChoice(this);"> <p>Special Mood Lemp <b>리무진 구매시 기본옵션</b></p></li>
+                            <li><img src="/img/pa10.jpg" alt=""><input type="checkbox" value=1000000 onclick="CheckChoice(this);"> <p>Space Mood Lemp <b>+1,000,000</b></p></li>
+                            <li><img src="/img/pa13.jpg" alt=""><input type="checkbox" value=1700000 onclick="CheckChoice(this);"> <p>대리석 플로어 <b>+1,700,000</b></p></li>
+                            <li><img src="/img/pa14.jpg" alt=""><input type="checkbox" value=2700000 onclick="CheckChoice(this);"> <p>우드플로어 <b>+2,700,000</b></p></li>
+                            <li><img src="/img/pa15.jpg" alt=""><input type="checkbox" value=1800000 onclick="CheckChoice(this);"> <p>파이버테리어 Star Light <b>+1,800,000</b></p></li>
+                            <li><img src="/img/pa300.jpg" alt=""><input type="checkbox" value=500000 onclick="CheckChoice(this);"> <p>슈팅 스타라이트 <b>+500,000</b></p></li>
+                            <li><img src="/img/pa17.jpg" alt=""><input type="checkbox" value=1200000 onclick="CheckChoice(this);"> <p>폴딩 백 멀티 시트 테이블 1ea <b>+1,200,000</b></p></li>
+                            <li><img src="/img/st011.jpg" alt=""><input type="checkbox" value=500000 onclick="CheckChoice(this);"> <p>고정식 사이드 스텝 <b>+500,000</b></p></li>
+                            <li><img src="/img/pa108.jpg" alt=""><input type="checkbox" value=800000 onclick="CheckChoice(this);"> <p>한쪽 전동식 사이드 스텝<b>+800,000</b></p></li>
+                            <li><img src="/img/dheldh1.jpg" alt=""><input type="checkbox" value=980000 onclick="CheckChoice(this);"> <p>오디오 패키지Ⅰ <b>+980,000</b></p></li>
+                            <li><img src="/img/dheldh2.jpg" alt=""><input type="checkbox" value=3800000 onclick="CheckChoice(this);"> <p>오디오 패키지Ⅱ <b>+3,800,000</b></p></li>
+                            <li><img src="/img/dheldh3.jpg" alt=""><input type="checkbox" value=7900000 onclick="CheckChoice(this);"> <p>오디오 패키지Ⅲ <b>+7,900,000</b></p></li>
+                            <li><img src="/img/dheldh4.jpg" alt=""><input type="checkbox" value=11800000 onclick="CheckChoice(this);"> <p>오디오 패키지Ⅳ <b>+11,800,000</b></p></li>
+
+                            <li><img src="/img/price/pa107.jpg" alt=""><input type="checkbox" value=5800000 onclick="CheckChoice(this);"> <p>네오테크 어반 서스펜션 <b>+5,800,000</b></p></li>
+                            <li><img src="/img/price/pa109.jpg" alt=""><input type="checkbox" value=3500000 onclick="CheckChoice(this);"> <p>HSD 프리미엄 서스펜션 <b>+3,500,000</b></p></li>
+                            <li><img src="/img/price/pa121.jpg" alt=""><input type="checkbox" value=2700000 onclick="CheckChoice(this);"> <p>CN 멀티 스포크 디자인 휠 20인치<b>+2,700,000</b></p></li>
+                            <li><img src="/img/price/pa115.jpg" alt=""><input type="checkbox" value=3700000 onclick="CheckChoice(this);"> <p>CN 멀티 스포크 디자인 휠 22인치<b>+3,700,000</b></p></li>
+                            <li><img src="/img/price/pa116.jpg" alt=""><input type="checkbox" value=3700000 onclick="CheckChoice(this);"> <p>핸즈 프라임 PR031 휠&타이어 <b>+3,700,000</b></p></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div>
+                            <input type="checkbox" value=13540000 onclick="CheckChoice(this);"> 
+                            <img src="./img/prd1_9_3.png" alt="" data-path="/base/img/price" data-pkg="prd1_pkg3">
+                            <p>Package3<b>+ 13,540,000</b></p>
+                        </div>
+                        <h3>추가옵션 보기 +</h3>
+                        <ul> 
+                            <li><img src="/base/img/price/pa2.jpg" alt=""><input type="checkbox" value=1000000 onclick="CheckChoice(this);"> <p>도어 4ps 트리밍 <b>+1,000,000</b></p></li>
+                            <li><img src="/base/img/price/pa3.jpg" alt=""><input type="checkbox" value=1200000 onclick="CheckChoice(this);"> <p>러기지&트렁크트리밍 <b>+1,200,000</b></p></li>
+                            <li><img src="/base/img/price/pa4.jpg" alt=""><input type="checkbox" value=1700000 onclick="CheckChoice(this);"> <p>T존트리밍 <b>+1,700,000</b></p></li>
+                            <li><img src="/base/img/price/pa5.jpg" alt=""><input type="checkbox" value=900000 onclick="CheckChoice(this);"> <p>D컷핸들 <b>900,000</b></p></li>
+                            <li><img src="/base/img/price/pa6.jpg" alt=""><input type="checkbox" value=1200000 onclick="CheckChoice(this);"> <p>CN 핸들 <b>+1,200,000</b></p></li>
+                            <li><img src="/base/img/price/pa6-2.jpg" alt=""><input type="checkbox" value=1300000 onclick="CheckChoice(this);"> <p>CN 우드핸들 <b>+1,300,000</b></p></li>
+                            <li><img src="/base/img/price/pa7.jpg" alt=""><input type="checkbox" value=800000 onclick="CheckChoice(this);"> <p>안전벨트 color change <b>+800,000</b></p></li>
+                            <li><img src="/base/img/price/pa8.jpg" alt=""><input type="checkbox" value=1400000 onclick="CheckChoice(this);"> <p>Foot-rest 2ps <b>+1,400,000</b></p></li>
+                            <li><img src="/base/img/price/pa9.jpg" alt=""><input type="checkbox" value=0 onclick="CheckChoice(this);"> <p>Special Mood Lemp <b>리무진 구매시 기본옵션</b></p></li>
+                            <li><img src="/base/img/price/pa10.jpg" alt=""><input type="checkbox" value=1000000 onclick="CheckChoice(this);"> <p>Space Mood Lemp <b>+1,000,000</b></p></li>
+                            <li><img src="/base/img/price/pa14.jpg" alt=""><input type="checkbox" value=1000000 onclick="CheckChoice(this);"> <p>우드플로어 <b>+1,000,000</b></p></li>
+                            <li><img src="/base/img/price/pa15.jpg" alt=""><input type="checkbox" value=1800000 onclick="CheckChoice(this);"> <p>파이버테리어 Star Light <b>+1,800,000</b></p></li>
+                            <li><img src="/base/img/price/pa300.jpg" alt=""><input type="checkbox" value=500000 onclick="CheckChoice(this);"> <p>슈팅 스타라이트 <b>+500,000</b></p></li>
+                            <li><img src="/base/img/price/pa17.jpg" alt=""><input type="checkbox" value=1200000 onclick="CheckChoice(this);"> <p>폴딩 백 멀티 시트 테이블 1ea <b>+1,200,000</b></p></li>
+                            <li><img src="/base/img/price/st011.jpg" alt=""><input type="checkbox" value=500000 onclick="CheckChoice(this);"> <p>고정식 사이드 스텝 <b>+500,000</b></p></li>
+                            <li><img src="/base/img/price/dheldh1.jpg" alt=""><input type="checkbox" value=980000 onclick="CheckChoice(this);"> <p>오디오 패키지Ⅰ <b>+980,000</b></p></li>
+                            <li><img src="/base/img/price/dheldh2.jpg" alt=""><input type="checkbox" value=3800000 onclick="CheckChoice(this);"> <p>오디오 패키지Ⅱ <b>+3,800,000</b></p></li>
+                            <li><img src="/base/img/price/dheldh3.jpg" alt=""><input type="checkbox" value=7900000 onclick="CheckChoice(this);"> <p>오디오 패키지Ⅲ <b>+7,900,000</b></p></li>
+                            <li><img src="/base/img/price/dheldh4.jpg" alt=""><input type="checkbox" value=11800000 onclick="CheckChoice(this);"> <p>오디오 패키지Ⅳ <b>+11,800,000</b></p></li>
+                            <li><img src="/base/img/price/pa108.jpg" alt=""><input type="checkbox" value=800000 onclick="CheckChoice(this);"> <p>한쪽 전동식 사이드 스텝<b>+800,000</b></p></li>
+                            <li><img src="/base/img/price/pa107.jpg" alt=""><input type="checkbox" value=5800000 onclick="CheckChoice(this);"> <p>네오테크 어반 서스펜션 <b>+5,800,000</b></p></li>
+                            <li><img src="/base/img/price/pa109.jpg" alt=""><input type="checkbox" value=3500000 onclick="CheckChoice(this);"> <p>HSD 프리미엄 서스펜션 <b>+3,500,000</b></p></li>
+                            <li><img src="/base/img/price/pa121.jpg" alt=""><input type="checkbox" value=2700000 onclick="CheckChoice(this);"> <p>CN 멀티 스포크 디자인 휠 20인치<b>+2,700,000</b></p></li>
+                            <li><img src="/base/img/price/pa115.jpg" alt=""><input type="checkbox" value=3700000 onclick="CheckChoice(this);"> <p>CN 멀티 스포크 디자인 휠 22인치<b>+3,700,000</b></p></li>
+                            <li><img src="/base/img/price/pa116.jpg" alt=""><input type="checkbox" value=3700000 onclick="CheckChoice(this);"> <p>핸즈 프라임 PR031 휠&타이어 <b>+3,700,000</b></p></li>
+
+
+                        </ul>
+                    </li>
+                    <li>
+                        <div>
+                            <input type="checkbox" value=18700000 onclick="CheckChoice(this);"> 
+                            <img src="./img/prd1_9_4.png" alt="" data-path="/base/img/price" data-pkg="prd1_pkg4">
+                            <p>Package4<b>+ 18,700,000</b></p>
+                        </div>
+                        <h3>추가옵션 보기 +</h3>
+                        <ul> 
+                                   <li><img src="/base/img/price/pa3.jpg" alt=""><input type="checkbox" value=1200000 onclick="CheckChoice(this);"> <p>러기지&트렁크트리밍 <b>+1,200,000</b></p></li>
+                            <li><img src="/base/img/price/pa4.jpg" alt=""><input type="checkbox" value=1700000 onclick="CheckChoice(this);"> <p>T존트리밍 <b>+1,700,000</b></p></li>
+                            <li><img src="/base/img/price/pa5.jpg" alt=""><input type="checkbox" value=900000 onclick="CheckChoice(this);"> <p>D컷핸들 <b>+900,000</b></p></li>
+                            <li><img src="/base/img/price/pa6.jpg" alt=""><input type="checkbox" value=1200000 onclick="CheckChoice(this);"> <p>CN 핸들 <b>+1,200,000</b></p></li>
+                            <li><img src="/base/img/price/pa6-2.jpg" alt=""><input type="checkbox" value=1300000 onclick="CheckChoice(this);"> <p>CN 우드핸들 <b>+1,300,000</b></p></li>
+                            <li><img src="/base/img/price/pa7.jpg" alt=""><input type="checkbox" value=800000 onclick="CheckChoice(this);"> <p>안전벨트 color change <b>+800,000</b></p></li>
+                            <li><img src="/base/img/price/pa8.jpg" alt=""><input type="checkbox" value=1400000 onclick="CheckChoice(this);"> <p>Foot-rest 2ps <b>+1,400,000</b></p></li>
+                            <li><img src="/base/img/price/pa9.jpg" alt=""><input type="checkbox" value=0 onclick="CheckChoice(this);"> <p>Special Mood Lemp <b>리무진 구매시 기본옵션</b></p></li>
+                            <li><img src="/base/img/price/pa10.jpg" alt=""><input type="checkbox" value=1000000 onclick="CheckChoice(this);"> <p>Space Mood Lemp <b>+1,000,000</b></p></li>
+                            <li><img src="/base/img/price/pa15.jpg" alt=""><input type="checkbox" value=1800000 onclick="CheckChoice(this);"> <p>파이버테리어 Star Light <b>+1,800,000</b></p></li>
+                            <li><img src="/base/img/price/pa300.jpg" alt=""><input type="checkbox" value=500000 onclick="CheckChoice(this);"> <p>슈팅 스타라이트 <b>+500,000</b></p></li>
+                            <li><img src="/base/img/price/pa17.jpg" alt=""><input type="checkbox" value=1200000 onclick="CheckChoice(this);"> <p>폴딩 백 멀티 시트 테이블 1ea <b>+1,200,000</b></p></li>
+                            <li><img src="/base/img/price/st011.jpg" alt=""><input type="checkbox" value=500000 onclick="CheckChoice(this);"> <p>고정식 사이드 스텝 <b>+500,000</b></p></li>
+                            <li><img src="/base/img/price/dheldh1.jpg" alt=""><input type="checkbox" value=980000 onclick="CheckChoice(this);"> <p>오디오 패키지Ⅰ <b>+980,000</b></p></li>
+                            <li><img src="/base/img/price/dheldh2.jpg" alt=""><input type="checkbox" value=3800000 onclick="CheckChoice(this);"> <p>오디오 패키지Ⅱ <b>+3,800,000</b></p></li>
+                            <li><img src="/base/img/price/dheldh3.jpg" alt=""><input type="checkbox" value=7900000 onclick="CheckChoice(this);"> <p>오디오 패키지Ⅲ <b>+7,900,000</b></p></li>
+                            <li><img src="/base/img/price/dheldh4.jpg" alt=""><input type="checkbox" value=11800000 onclick="CheckChoice(this);"> <p>오디오 패키지Ⅳ <b>+11,800,000</b></p></li>
+                            <li><img src="/base/img/price/pa108.jpg" alt=""><input type="checkbox" value=800000 onclick="CheckChoice(this);"> <p>한쪽 전동식 사이드 스텝<b>+800,000</b></p></li>
+                            <li><img src="/base/img/price/pa107.jpg" alt=""><input type="checkbox" value=5800000 onclick="CheckChoice(this);"> <p>네오테크 어반 서스펜션 <b>+5,800,000</b></p></li>
+                            <li><img src="/base/img/price/pa109.jpg" alt=""><input type="checkbox" value=3500000 onclick="CheckChoice(this);"> <p>HSD 프리미엄 서스펜션 <b>+3,500,000</b></p></li>
+                            <li><img src="/base/img/price/pa121.jpg" alt=""><input type="checkbox" value=2700000 onclick="CheckChoice(this);"> <p>CN 멀티 스포크 디자인 휠 20인치<b>+2,700,000</b></p></li>
+                            <li><img src="/base/img/price/pa115.jpg" alt=""><input type="checkbox" value=3700000 onclick="CheckChoice(this);"> <p>CN 멀티 스포크 디자인 휠 22인치<b>+3,700,000</b></p></li>
+                            <li><img src="/base/img/price/pa116.jpg" alt=""><input type="checkbox" value=3700000 onclick="CheckChoice(this);"> <p>핸즈 프라임 PR031 휠&타이어 <b>+3,700,000</b></p></li>
+
+
+                        </ul>
+                    </li>
+                    <li>
+                        <div>
+                            <input type="checkbox" value=28000000 onclick="CheckChoice(this);"> 
+                            <img src="/img/prd1_9_5.png" alt="" data-path="/base/img/price" data-pkg="prd1_pkg5">
+                            <p>Package5<b>+ 28,000,000</b></p>
+                        </div>
+                        <h3>추가옵션 보기 +</h3>
+                        <ul> 
+                            <li><img src="/base/img/price/pa5.jpg" alt=""><input type="checkbox" value=900000 onclick="CheckChoice(this);"> <p>D컷핸들 <b>+900,000</b></p></li>
+                            <li><img src="/base/img/price/pa6.jpg" alt=""><input type="checkbox" value=1200000 onclick="CheckChoice(this);"> <p>CN 핸들 <b>+1,200,000</b></p></li>
+                            <li><img src="/base/img/price/pa6-2.jpg" alt=""><input type="checkbox" value=1300000 onclick="CheckChoice(this);"> <p>CN 우드핸들 <b>+1,300,000</b></p></li>
+                            <li><img src="/base/img/price/pa9.jpg" alt=""><input type="checkbox" value=0 onclick="CheckChoice(this);"> <p>Special Mood Lemp <b>리무진 구매시 기본옵션</b></p></li>
+                            <li><img src="/base/img/price/pa10.jpg" alt=""><input type="checkbox" value=1000000 onclick="CheckChoice(this);"> <p>Space Mood Lemp <b>+1,000,000</b></p></li>
+                            <li><img src="/base/img/price/pa19.jpg" alt=""><input type="checkbox" value=2500000 onclick="CheckChoice(this);"> <p>Star Light - 도어&러기지<b>+2,500,000</b></p></li>
+                            <li><img src="/base/img/price/pa300.jpg" alt=""><input type="checkbox" value=500000 onclick="CheckChoice(this);"> <p>슈팅 스타라이트 <b>+500,000</b></p></li>
+                            <li><img src="/base/img/price/pa17.jpg" alt=""><input type="checkbox" value=1200000 onclick="CheckChoice(this);"> <p>폴딩 백 멀티 시트 테이블 1ea <b>+1,200,000</b></p></li>
+                            <li><img src="/base/img/price/st011.jpg" alt=""><input type="checkbox" value=500000 onclick="CheckChoice(this);"> <p>고정식 사이드 스텝 <b>+500,000</b></p></li>
+                            <li><img src="/base/img/price/dheldh1.jpg" alt=""><input type="checkbox" value=980000 onclick="CheckChoice(this);"> <p>오디오 패키지Ⅰ <b>+980,000</b></p></li>
+                            <li><img src="/base/img/price/dheldh2.jpg" alt=""><input type="checkbox" value=3800000 onclick="CheckChoice(this);"> <p>오디오 패키지Ⅱ <b>+3,800,000</b></p></li>
+                            <li><img src="/base/img/price/dheldh3.jpg" alt=""><input type="checkbox" value=7900000 onclick="CheckChoice(this);"> <p>오디오 패키지Ⅲ <b>+7,900,000</b></p></li>
+                            <li><img src="/base/img/price/dheldh4.jpg" alt=""><input type="checkbox" value=11800000 onclick="CheckChoice(this);"> <p>오디오 패키지Ⅳ <b>+11,800,000</b></p></li>
+                            <li><img src="/base/img/price/pa108.jpg" alt=""><input type="checkbox" value=800000 onclick="CheckChoice(this);"> <p>한쪽 전동식 사이드 스텝<b>+800,000</b></p></li>
+                            <li><img src="/base/img/price/pa107.jpg" alt=""><input type="checkbox" value=5800000 onclick="CheckChoice(this);"> <p>네오테크 어반 서스펜션 <b>+5,800,000</b></p></li>
+                            <li><img src="/base/img/price/pa109.jpg" alt=""><input type="checkbox" value=3500000 onclick="CheckChoice(this);"> <p>HSD 프리미엄 서스펜션 <b>+3,500,000</b></p></li>
+                            <li><img src="/base/img/price/pa121.jpg" alt=""><input type="checkbox" value=2700000 onclick="CheckChoice(this);"> <p>CN 멀티 스포크 디자인 휠 20인치<b>+2,700,000</b></p></li>
+                            <li><img src="/base/img/price/pa115.jpg" alt=""><input type="checkbox" value=3700000 onclick="CheckChoice(this);"> <p>CN 멀티 스포크 디자인 휠 22인치<b>+3,700,000</b></p></li>
+                            <li><img src="/base/img/price/pa116.jpg" alt=""><input type="checkbox" value=3700000 onclick="CheckChoice(this);"> <p>핸즈 프라임 PR031 휠&타이어 <b>+3,700,000</b></p></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div>
+                            <input type="checkbox" value=5300000 onclick="CheckChoice(this);"> 
+                            <img src="./img/prd1_9_6.png" alt="" data-path="/base/img/price" data-pkg="prd1_pkg6">
+                            <p>차박 Package6<b>+ 5,300,000</b></p>
+                        </div>
+                        <h3>추가옵션 보기 +</h3>
+                        <ul> 
+                            <li><img src="/base/img/price/pa20.jpg" alt=""><input type="checkbox" value=1800000 onclick="CheckChoice(this);"> <p>1열 2열 리무진 시트 <b>1,800,000</b></p></li>
+                            <li><img src="/base/img/price/pa2.jpg" alt=""><input type="checkbox" value=1000000 onclick="CheckChoice(this);"> <p>도어 4ps 트리밍 <b>+1,000,000</b></p></li>
+                            <li><img src="/base/img/price/pa3.jpg" alt=""><input type="checkbox" value=1200000 onclick="CheckChoice(this);"> <p>러기지&트렁크트리밍 <b>+1,200,000</b></p></li>
+                            <li><img src="/base/img/price/pa4.jpg" alt=""><input type="checkbox" value=1700000 onclick="CheckChoice(this);"> <p>T존트리밍 <b>+1,700,000</b></p></li>
+                            <li><img src="/base/img/price/pa5.jpg" alt=""><input type="checkbox" value=900000 onclick="CheckChoice(this);"> <p>D컷핸들<b>+900,000</b></p></li>
+                            <li><img src="/base/img/price/pa6.jpg" alt=""><input type="checkbox" value=1200000 onclick="CheckChoice(this);"> <p>CN 핸들 <b>+1,200,000</b></p></li>
+                            <li><img src="/base/img/price/pa6-2.jpg" alt=""><input type="checkbox" value=1300000 onclick="CheckChoice(this);"> <p>CN 우드핸들 <b>+1,300,000</b></p></li>
+                            <li><img src="/base/img/price/pa7.jpg" alt=""><input type="checkbox" value=800000 onclick="CheckChoice(this);"> <p>안전벨트 color change <b>+800,000</b></p></li>
+                            <li><img src="/base/img/price/pa8.jpg" alt=""><input type="checkbox" value=1400000 onclick="CheckChoice(this);"> <p>Foot-rest 2ps <b>+1,400,000</b></p></li>
+                            <li><img src="/base/img/price/pa9.jpg" alt=""><input type="checkbox" value=0 onclick="CheckChoice(this);"> <p>Special Mood Lemp <b>리무진 구매시 기본옵션</b></p></li>
+                            <li><img src="/base/img/price/pa10.jpg" alt=""><input type="checkbox" value=1000000 onclick="CheckChoice(this);"> <p>Space Mood Lemp <b>+1,000,000</b></p></li>
+                            <li><img src="/base/img/price/pa13.jpg" alt=""><input type="checkbox" value=1700000 onclick="CheckChoice(this);"> <p>대리석 플로어 <b>+1,700,000</b></p></li>
+                            <li><img src="/base/img/price/pa14.jpg" alt=""><input type="checkbox" value=2700000 onclick="CheckChoice(this);"> <p>우드플로어 <b>+2,700,000</b></p></li>
+                            <li><img src="/base/img/price/pa15.jpg" alt=""><input type="checkbox" value=1800000 onclick="CheckChoice(this);"> <p>파이버테리어 Star Light <b>+1,800,000</b></p></li>
+                            <li><img src="/base/img/price/pa300.jpg" alt=""><input type="checkbox" value=500000 onclick="CheckChoice(this);"> <p>슈팅 스타라이트 <b>+500,000</b></p></li>
+                            <li><img src="/base/img/price/pa17.jpg" alt=""><input type="checkbox" value=1200000 onclick="CheckChoice(this);"> <p>폴딩 백 멀티 시트 테이블 1ea <b>+1,200,000</b></p></li>
+                            <li><img src="/base/img/price/st011.jpg" alt=""><input type="checkbox" value=500000 onclick="CheckChoice(this);"> <p>고정식 사이드 스텝 <b>+500,000</b></p></li>
+                            <li><img src="/base/img/price/dheldh1.jpg" alt=""><input type="checkbox" value=980000 onclick="CheckChoice(this);"> <p>오디오 패키지Ⅰ <b>+980,000</b></p></li>
+                            <li><img src="/base/img/price/dheldh2.jpg" alt=""><input type="checkbox" value=3800000 onclick="CheckChoice(this);"> <p>오디오 패키지Ⅱ <b>+3,800,000</b></p></li>
+                            <li><img src="/base/img/price/dheldh3.jpg" alt=""><input type="checkbox" value=7900000 onclick="CheckChoice(this);"> <p>오디오 패키지Ⅲ <b>+7,900,000</b></p></li>
+                            <li><img src="/base/img/price/dheldh4.jpg" alt=""><input type="checkbox" value=11800000 onclick="CheckChoice(this);"> <p>오디오 패키지Ⅳ <b>+11,800,000</b></p></li>
+                            <li><img src="/base/img/price/pa108.jpg" alt=""><input type="checkbox" value=800000 onclick="CheckChoice(this);"> <p>한쪽 전동식 사이드 스텝<b>+800,000</b></p></li>
+                            <li><img src="/base/img/price/pa107.jpg" alt=""><input type="checkbox" value=5800000 onclick="CheckChoice(this);"> <p>네오테크 어반 서스펜션 <b>+5,800,000</b></p></li>
+                            <li><img src="/base/img/price/pa109.jpg" alt=""><input type="checkbox" value=3500000 onclick="CheckChoice(this);"> <p>HSD 프리미엄 서스펜션 <b>+3,500,000</b></p></li>
+                            <li><img src="/base/img/price/pa121.jpg" alt=""><input type="checkbox" value=2700000 onclick="CheckChoice(this);"> <p>CN 멀티 스포크 디자인 휠 20인치<b>+2,700,000</b></p></li>
+                            <li><img src="/base/img/price/pa115.jpg" alt=""><input type="checkbox" value=3700000 onclick="CheckChoice(this);"> <p>CN 멀티 스포크 디자인 휠 22인치<b>+3,700,000</b></p></li>
+                            <li><img src="/base/img/price/pa116.jpg" alt=""><input type="checkbox" value=3700000 onclick="CheckChoice(this);"> <p>핸즈 프라임 PR031 휠&타이어 <b>+3,700,000</b></p></li>
+                    </li>
+                </ul>
+            </article>
+            
+            <div class="total">
+                <b>총 합계 :</b>
+                <input type="text" name="total" class="name" id="total" readonly onFocus="this.blur();" value=""> <span>원</span>  
+            </div>
+        </form>
+    </section>
+    
+    
+    <section id="pic" class="picbox">
+        <div>
+            <img src="/base/img/price/base/img/price_carnival_1.png" alt="">
+            <a href="#none" class="xi-close-thin"></a>
+        </div>
+    </section>
+    
+    <section id="pkg" class="picbox">
+        <div>
+            <ul class="slide">
+            </ul>
+            <a href="#none" class="xi-angle-left-thin prev"></a>
+            <a href="#none" class="xi-angle-right-thin next"></a>
+            <a href="#none" class="xi-close-thin"></a>
+        </div>
+    </section>
+    
+<style>
+/* .dn { display:b !important; } */
+</style>
+    <script src="./js/price.js"></script>
+<script>
+  $(".gravity input").click(function(){
+$(".dn_style input").toggleClass("dn");
+});
+</script>
+</body>
+</html>
+<script language="javascript" type="text/javascript" src="./js/javascript.lib.js"></script>
+
+            <script type="text/javascript">
+            var JsHost = (("https:" == document.location.protocol) ? "https://" : "http://");
+            var sTime = new Date().getTime();
+            document.write(unescape("%3Cscript id='log_script' src='" + JsHost + "blg-jsk.cafe24.com/weblog.js?uid=thecn&t=" + sTime + "' type='text/javascript'%3E%3C/script%3E"));
+            </script>
+
+<script>
+
+    function subNav(){
+        document.getElementById('sub').style.display = 'block';
+        document.getElementById('mob').style.display = 'block';
+    }
+
+    function closeNav(){
+        document.getElementById('sub').style.display = 'none';
+        document.getElementById('mob').style.display = 'none';
+    }
+
+</script>
+        
+
+</body>
+</html>

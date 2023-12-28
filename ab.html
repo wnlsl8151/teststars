@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ko">
+  	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-210333656-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+
+			gtag('js', new Date());
+			gtag('config', 'UA-210333656-1');
+		</script>
+
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>회사 소개</title>
+		<link rel="shortcut icon" href="/common/kr/images/favicon.ico" />
+		<link rel="apple-touch-icon-precomposed" href="/common/kr/images/ios-favicon.ico" />
+		<link rel="canonical" href=""/>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0,minimum-scale=1.0,target-densitydpi=medium-dpi" />
+		<meta name="keywords" content="(주)스타리무진,카니발 하이리무진 특장"/>
+		<meta name="description" content="프리미엄 카니발 하이리무진 특장"/>
+		<meta property="og:url" content="" id="og-url-value"/>
+		<meta property="og:type" content="website" id="og-type-value"/>
+		<meta property="og:site_name" content="(주)스타리무진" id="og-sitename-value"/>
+		<meta property="og:title" content="프리미엄 카니발 하이리무직 특장 (주)스타리무진" id="og-title-value"/>
+		<meta property="og:description" content="프리미엄 카니발 하이리무진 특장" id="og-description-value"/>
+		<meta property="og:image" content="" id="og-image-value"/>
+		<link rel="stylesheet" href="./css/swiper.css" />
+		<link rel="stylesheet" href="./css/fonts.css" />
+		<link rel="stylesheet" href="./css/common.css" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<script type="text/javascript" src="./js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="./js/gsap.min.js"></script>
+		<script type="text/javascript" src="./js/ScrollTrigger.min.js"></script>
+		<script type="text/javascript" src="./js/swiper.min.js"></script>
+		<!-- 공통함수 -->
+		<script type="text/javascript" src="./js/script.js"></script>
+		<script type="text/javascript" src="./js/jquery.cookies.js"></script>
+		<script type="text/javascript" src="./js/COCmmCtrl.js"></script>
+		<!-- 공통메시지 -->
+		<script type="text/javascript" src="./js/COMsgCtrl.js"></script>
+  	</head>
+  	<body data-lngg-cd="kr" data-device-type="web">
+		<div id="wrap">
+			<header>
+				<div class="logo"><a href="./index.html" title="메인으로 이동"></a></div>
+				<div data-controller="controller/co/COTopSearchCtrl">
+					<div class="header_srch_area">
+						<a class="btn_srch btn_top_srch" href="javascript:" title="검색 열기"></a>
+					</div>
+					<div class="header_srch_pop_area ">
+						<form name="frmTopSrch" method="GET" action="/kr/search">
+							<p class="inner_dimd" ></p>
+							<div class="for_bg">
+								<div class="srch_inner">
+									<div class="form_search">
+										<input type="text" placeholder="검색어를 입력하세요." name="q" maxlength="30" id="frmTopSrchQ">
+										<div class="input_btn_wrap">
+											<button type="button" class="btn_delete" title="지우기"></button>
+											<button type="button" class="btn_search" title="검색"></button>
+										</div>
+									</div>
+									<div class="recommend_keyword_area" style="display:none;">
+										<p class="keyword_title">추천 키워드</p>
+										<div class="keyword_wrap"></div>
+									</div>
+								</div>
+							</div>
+						</form>
+						<a class="btn_close_srch_mo active" href="javascript:" title="검색 닫기"></a>
+					</div>
+				</div>
+				<a class="only_mob btn_open_mo_menu" href="javascript:" title="메뉴 열기">
+					<img src="./img/nav2.png" alt="">
+                </a>
+				<nav>
+					<p class="inner_dimd"></p>
+					<div class="for_bg">
+						<div class="gnb_w">
+							<ul class="gnb">
+									<li class="isCurrent">
+												<a class="one_depth " href="./index.html" target="_self"  ><span>홈</span></a>
+												<!-- <ul class="two_pack">
+											<li><a class="two_depth " href="/kr/group/introduce" target="_self"  >비전 & 가치</a></li>
+											<li><a class="two_depth " href="/kr/group/heritage" target="_self"  >The Origin</a></li>
+											<li><a class="two_depth " href="/kr/group/one-only-committee" target="_self"  >찾아오시는 길</a></li>
+											<li><a class="two_depth " href="/kr/group/corporate-identity" target="_self"  >로고 소개</a></li>
+											</ul> -->
+											</li>
+										<li class="">
+												<a class="one_depth " href="./ab.html" target="_self"  ><span>회사 소개</span></a>
+												<!-- <ul class="two_pack">
+											<li><a class="two_depth " href="/kr/subsidiary/introduce" target="_self"  >개요</a></li>
+											<li><a class="two_depth " href="/kr/subsidiary/holding-company" target="_self"  >지주회사</a></li>
+											<li><a class="two_depth " href="/kr/subsidiary/core-material" target="_self"  >핵심소재</a></li>
+											<li><a class="two_depth " href="/kr/subsidiary/fashion" target="_self"  >패션</a></li>
+											<li><a class="two_depth " href="/kr/subsidiary/construction-distribution" target="_self"  >건설∙유통∙레저</a></li>
+											<li><a class="two_depth " href="/kr/subsidiary/environmental-energy" target="_self"  >환경∙에너지</a></li>
+											<li><a class="two_depth " href="/kr/subsidiary/automobile-information-technology" target="_self"  >자동차부품∙IT∙복합재</a></li>
+											<li><a class="two_depth " href="/kr/subsidiary/bio-health-care" target="_self"  >바이오∙헬스케어</a></li>
+											</ul> -->
+											</li>
+										<li class="">
+												<a class="one_depth " href="javascript:" target="_self"  ><span>모델</span></a>
+												<!-- <ul class="two_pack">
+											<li><a class="two_depth " href="/kr/sustainability/management/environment" target="_self"  >ESG경영</a></li>
+											<li><a class="two_depth " href="/kr/sustainability/social-contribution/introduce" target="_self"  >사회적책임</a></li>
+											<li><a class="two_depth " href="/kr/sustainability/ethic/introduce" target="_self"  >윤리경영</a></li>
+											</ul> -->
+											</li>
+										<li class="">
+												<a class="one_depth " href="javascript:" target="_self"  ><span>커스텀</span></a>
+												<!-- <ul class="two_pack">
+											<li><a class="two_depth " href="/kr/invest/stockholder-condition" target="_self"  >지배구조</a></li>
+											<li><a class="two_depth " href="/kr/invest/stock-information" target="_self"  >주가정보</a></li>
+											<li><a class="two_depth " href="/kr/invest/disclosure-information" target="_self"  >공시정보</a></li>
+											<li><a class="two_depth " href="/kr/invest/notice" target="_self"  >전자공고</a></li>
+											<li><a class="two_depth " href="/kr/invest/distribution" target="_self"  >주주환원현황</a></li>
+											</ul> -->
+											</li>
+										<li class="">
+												<a class="one_depth " href="./prestige.html" target="_self"  ><span>가상 견적</span></a>
+												<!-- <ul class="two_pack">
+											<li><a class="two_depth " href="/kr/media/news" target="_self"  >뉴스</a></li>
+											<li><a class="two_depth " href="/kr/media/communication" target="_self"  >소셜미디어</a></li>
+											</ul> -->
+											</li>
+										<li class="">
+												<a class="one_depth " href="https://www.youtube.com/@Starlm/videos" target="_self"  ><span>유튜브</span></a>
+												<!-- <ul class="two_pack">
+											<li><a class="two_depth menu_employ" href="https://dream.kolon.com/" target="_blank" rel="noopener noreferrer" >채용정보</a></li>
+											</ul> -->
+											</li>
+                                            <li class="">
+												<a class="one_depth " href="javascript:" target="_self"  ><span>고객 지원</span></a>
+												<!-- <ul class="two_pack">
+											<li><a class="two_depth menu_employ" href="https://dream.kolon.com/" target="_blank" rel="noopener noreferrer" >채용정보</a></li>
+											</ul> -->
+											</li>
+										</ul>
+							</div>
+
+						<div class="mobile_bot_fix_area">
+							<div class="header_lang_area">
+								<a class="btn_lang_cho" href="javascript:" title="언어 선택"></a>
+								<div class="lang_w">
+									<a class="lang_list on" href="/kr/main">KOR</a>
+									<a class="lang_list " href="/en/main">ENG</a>
+									<a class="lang_list " href="/cn/main">CHN</a>
+								</div>
+							</div>
+
+							<div class="subsidiary_site_area">
+								<a class="btn_open_subsidiary_site" href="javascript:" title="계열사 목록 열기"></a>
+							</div>
+						</div>
+						<form name="frmCsrfData">
+							<input type="hidden" name="_csrf" value="f45716ff-5cd4-46da-b993-6ed14d6132a7" />
+						</form>
+
+						<a class="only_mob btn_close_mo_menu" href="javascript:" title="메뉴 닫기">
+                            <img src="./img/nav2.png" alt="">
+                        </a>
+					</div>
+				</nav>
+			</header>
+			
+			<section class="cont_wrap">
+				<div class="page_path_area">
+					<div class="path_w">
+						<div class="depth">홈</div>
+								<div class="depth current">회사 소개</div>
+								</div>
+				</div>
+
+
+
+
+
+
+
+<div class="cont_inner">
+	<div class="inner">
+		<div class="page_title_area">
+			<h1 class="heading_title_ExBold" style="font-weight: 900;">(주)스타리무진 <br>프리미엄 카니발 <br> 하이리무진 특장 전문</h1>
+		</div>
+		<div class="sub_con_section">
+			<div class="img_txt_wrap right_img_fix_area scroll_motion">
+				<div class="fixed_con_area">
+					<div class="change_img_area">
+						<div class="img_con_area">
+							<div class="img_list">
+								<div class="img" style="background-image: url(./img/752560127.png)"></div>
+							</div>
+							<div class="img_list">
+								<div class="img" style="background-image: url(./img/760644082.jpg)"></div>
+							</div>
+							<div class="img_list">
+								<div class="img" style="background-image: url(./img/123123.jpg)"></div>
+							</div>
+						</div>
+					</div>
+					<div class="txt_con_area">
+						<div class="con_list scroll_motion">
+							<div class="only_mobile mobile_img">
+								<img src="./img/752560127.png" alt="top">
+							</div>
+
+							<div class="for_v_center">
+								<h2 class="heading_title_Bold" style="font-weight: 900;">Innovation</h2>
+								<p class="logo_img"><img src="./img/logo_origin.png" alt="스타리무진 로고" style="width: 200px; margin-left: 50px;"></p>
+								<p class="heading_title_Minimum">혁신의 기업 <br> Since 2020</p>
+
+								<p class="page_body_txt_Regular">(주)스타리무진은 2020년 8월 1일에 설립된 카니발 하이리무진 커스텀 전문업체로서 그동안 3세대 카니발 하이리무진을 커스텀하며 쌓아온 무수히 많은 경험을 토대로 2022년 4월 4세대 독자적인 카니발 하이리무진을 성공적으로 출시하였습니다.
+
+                                    소비자들에게 보다 행복하고 더 나은 삶을 제공하기 위해 카니발 하이리무진의 공간을 더욱 편안하고 안전하게 만들 수 있는 지속가능한 새로운 솔루션을 항상 개발하고 있습니다.
+                                    
+                                    많은 성원 부탁 드립니다.</p>
+								
+
+							</div>
+
+						</div>
+						<div class="con_list scroll_motion">
+							<div class="only_mobile mobile_img">
+								<img src="./img/760644082.jpg" alt="">
+							</div>
+
+							<div class="for_v_center">
+								<h2 class="heading_title_Bold" style="font-weight: 900;">The Brand</h2>
+								<p class="logo_img"><img src="./img/logo_origin.png" style="width: 200px;" alt="origin 로고"></p>
+								<p class="heading_title_Minimum">신뢰할 수 있는 브랜드</p>
+								<p class="page_body_txt_Regular">스타리무진의 엔지니어들은 매일 협업과 혁신을 통해 편리하고 안전하며 최고의 품질을 지닌 결과물을 만들기 위해 스마트 솔루션을 도입하면서 미래지향적인 차량을 개발해 나가고 있습니다.
+
+                                    스타리무진의 차량은 최고의 업체들과 협력하여 설계 및 제작하고 있으며 제품의 품질, 성능 및 수명을 보장하기 위하여 엄격한 절차에 따라 테스트 및 점검을 시행합니다.     
+                             </p>
+								<p class="page_body_txt_Regular">새로운 제품이나 제품 개선 방식에 관하여 제안하실 점이 있으시다면 언제든 여러분의 아이디어를 공유해주세요!</p> <br><br>
+							</div>
+
+						</div>
+						<div class="con_list scroll_motion">
+							<div class="only_mobile mobile_img">
+								<img src="./img/123123.jpg" alt="middle">
+							</div>
+
+							<div class="for_v_center">
+								<h2 class="heading_title_Bold" style="font-weight: 900; margin-top: 50px;">Luxury</h2>
+								<p class="logo_img"><img src="./img/logo_origin.png" style="width: 200px;" alt="origin 로고"></p><!-- 2022-07-08 추가, 2022-07-29 alt값 추가 -->
+								<p class="heading_title_Minimum">럭셔리한 생활의 중심이 되다</p><!-- 2022-09-20 수정 -->
+								<p class="page_body_txt_Regular">(주)스타리무진은 내 가족이 타는 차라고 생각하고 작업하고 있습니다.</p><!-- 2022-09-20 수정 -->
+
+								<div class="keyword_div">
+									<div class="txt_div">
+										<p class="sub_txt">First Choice of Customers</p>
+										<p class="page_sub_title_Bold"><span class="point">고객</span>에게 신뢰받는 (주)스타리무진</p>
+									</div>
+									<div class="txt_div">
+										<p class="sub_txt">Technology</p>
+										<p class="page_sub_title_Bold">최고의 경쟁력을 갖춘 <span class="point">기술</span></p>
+									</div>
+									<div class="txt_div">
+										<p class="sub_txt">Custom Made</p>
+										<p class="page_sub_title_Bold">독특하고 차별화 된 <span class="point">커스텀</span></p>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</div>
+
+
+
+
+
+
+			</section>
+			<footer>
+				<div class="inner">
+					<div class="top_row">
+						<div class="footer_link_area">
+							
+								<a class="link personal_info" href="">개인정보 처리방침</a>
+								<a class="link" href="">윤리경영</a>
+								<a class="link" href="">전자공고</a>
+								<a class="link" href="">법적고지</a>
+							
+							<a class="link" href="">Contact Us</a>
+						</div>
+
+						
+						</div>
+
+						
+					</div>
+					<div class="bot_row">
+						<p class="copyright">© starlimousine Corp. All Rights Reserved.</p>
+						<div class="footer_sns_w">
+							<a class="sns_list youtube" href="https://www.youtube.com/user/kolonsns" target="_blank" title="youtube 새창 열기" rel="noopener noreferrer"></a>
+							<a class="sns_list instagram" href="https://www.instagram.com/accounts/login/?next=/kolongroup/" target="_blank" title="instagram 새창 열기" rel="noopener noreferrer"></a>
+							<a class="sns_list facebook" href="https://www.facebook.com/kolongroup" target="_blank" title="facebook 새창 열기" rel="noopener noreferrer"></a>
+							<a class="sns_list blog" href="https://kolonblog.tistory.com" target="_blank" title="blog 새창 열기" rel="noopener noreferrer"></a>
+						</div>
+
+					</div>
+				</div>
+			</footer>
+			<div class="landscape_screen">
+				<div class="txt_area">
+					<p class="icon"><img src="/common/kr/images/icon-landscape-phone.svg" alt=""></p>
+					<p class="txt">
+						
+							
+							
+							
+								(주)스타리무진의 모바일 웹은 <br />세로 화면에 최적화되어있습니다
+							
+						
+
+					</p>
+				</div>
+				<p class="logo"><img src="./img/123123.jpg" alt=""></p>
+			</div>
+			<div class="loading_area loadingbar" style="display:none">
+				<div class="icon_wrap">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+
+			<a class="btn_top" href="javascript:" title="페이지 상단으로 이동" onclick="repositioningTopBtn()">
+				<svg>
+					<circle class="svg_circle" id="top_svg_circle" cx="28" cy="28" r="27" stroke="#000000" stroke-width="1" fill="none"></circle>
+				</svg>
+				<span class="blind percent">23% 스크롤 진행</span>
+			</a>
+		</div>
+		
+		
+		<script type="text/javascript" src="./js/require.js"></script>
+	</body>
+</html>
